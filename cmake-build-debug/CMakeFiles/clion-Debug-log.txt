@@ -1,9 +1,5 @@
 "D:\CLion 2023.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\User\CLionProjects\CW_ASD -B C:\Users\User\CLionProjects\CW_ASD\cmake-build-debug
 -- Found SFML 2.5.1 in C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML 2.5.1/lib/cmake/SFML
-CMake Error at CMakeLists.txt:10 (target_link_libraries):
-  Cannot specify link libraries for target "CW_ASD" which is not built by
-  this project.
-
-
--- Configuring incomplete, errors occurred!
-See also "C:/Users/User/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/User/CLionProjects/CW_ASD/cmake-build-debug

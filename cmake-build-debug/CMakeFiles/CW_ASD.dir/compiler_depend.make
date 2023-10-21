@@ -359,7 +359,81 @@ CMakeFiles/CW_ASD.dir/main.cpp.obj: C:/Users/User/CLionProjects/CW_ASD/main.cpp 
   C:/msys64/mingw64/include/c++/12.1.0/expected \
   C:/msys64/mingw64/include/c++/12.1.0/spanstream \
   C:/msys64/mingw64/include/c++/12.1.0/stacktrace \
-  C:/msys64/mingw64/include/c++/12.1.0/stdatomic.h
+  C:/msys64/mingw64/include/c++/12.1.0/stdatomic.h \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Config.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Clock.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Export.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Time.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Err.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/FileInputStream.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/InputStream.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/NonCopyable.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Lock.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/MemoryInputStream.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Mutex.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Sleep.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/String.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Utf.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Utf.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/String.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Thread.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Thread.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocal.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector2.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector2.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector3.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector3.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Clipboard.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Export.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Context.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/GlResource.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/ContextSettings.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Cursor.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Event.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Joystick.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Keyboard.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Mouse.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Sensor.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Touch.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/VideoMode.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Window.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/WindowHandle.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/WindowStyle.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/BlendMode.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Export.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/CircleShape.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Shape.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Drawable.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderStates.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Transform.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Rect.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Rect.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Transformable.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/VertexArray.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Vertex.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Color.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Font.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glyph.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Texture.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Image.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/View.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Shader.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glsl.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glsl.inl \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Sprite.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Text.hpp \
+  C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/VertexBuffer.hpp
 
 
 C:/msys64/mingw64/include/c++/12.1.0/climits:
@@ -394,9 +468,13 @@ C:/msys64/mingw64/include/sys/timeb.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/iostream:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Export.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_raw_storage_iter.h:
 
 C:/msys64/mingw64/include/crtdefs.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/WindowStyle.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++config.h:
 
@@ -430,6 +508,8 @@ C:/msys64/mingw64/include/c++/12.1.0/cwchar:
 
 C:/msys64/mingw64/include/wchar.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Event.hpp:
+
 C:/msys64/mingw64/include/float.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/string_view:
@@ -450,6 +530,8 @@ C:/msys64/mingw64/include/c++/12.1.0/typeinfo:
 
 C:/msys64/mingw64/include/corecrt_stdio_config.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Joystick.hpp:
+
 C:/msys64/mingw64/include/_mingw_off_t.h:
 
 C:/msys64/mingw64/include/corecrt_wstdlib.h:
@@ -459,6 +541,8 @@ C:/msys64/mingw64/include/_mingw_stat64.h:
 C:/msys64/mingw64/include/swprintf.inl:
 
 C:/msys64/mingw64/include/c++/12.1.0/compare:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Text.hpp:
 
 C:/msys64/mingw64/include/sec_api/wchar_s.h:
 
@@ -544,6 +628,8 @@ C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
 C:/msys64/mingw64/include/pthread.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Texture.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/array:
 
 C:/msys64/mingw64/include/errno.h:
@@ -554,6 +640,8 @@ C:/msys64/mingw64/include/sys/types.h:
 
 C:/msys64/mingw64/include/process.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Shader.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/uses_allocator_args.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/cstddef:
@@ -563,6 +651,8 @@ C:/msys64/mingw64/include/corecrt_startup.h:
 C:/msys64/mingw64/include/c++/12.1.0/syncstream:
 
 C:/msys64/mingw64/include/limits.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderTexture.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/ranges_uninitialized.h:
 
@@ -594,6 +684,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/allocator.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/CircleShape.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/new_allocator.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/random.h:
@@ -605,6 +697,8 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/12.1.0/include/stdalign.h:
 C:/msys64/mingw64/include/c++/12.1.0/cstdio:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/cxxabi_forced.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector3.inl:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_iterator.h:
 
@@ -634,6 +728,10 @@ C:/msys64/mingw64/include/c++/12.1.0/ext/aligned_buffer.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/utility.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Sleep.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/valarray_before.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/debug/debug.h:
@@ -650,6 +748,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/refwrap.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/invoke.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Shape.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/range_access.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/initializer_list:
@@ -658,9 +758,13 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/ext/alloc_traits.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/NonCopyable.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/locale:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/alloc_traits.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderTarget.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_tree.h:
 
@@ -720,6 +824,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/basic_string.tcc:
 
 C:/msys64/mingw64/include/c++/12.1.0/system_error:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Utf.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/error_constants.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_stack.h:
@@ -729,6 +835,8 @@ C:/msys64/mingw64/include/c++/12.1.0/streambuf:
 C:/msys64/mingw64/include/c++/12.1.0/forward_list:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/streambuf.tcc:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Image.hpp:
 
 C:/msys64/mingw64/include/wctype.h:
 
@@ -741,6 +849,8 @@ C:/msys64/mingw64/include/c++/12.1.0/cwctype:
 C:/msys64/mingw64/include/c++/12.1.0/cstdbool:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/ctype_base.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Mouse.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
@@ -762,6 +872,8 @@ C:/msys64/mingw64/include/c++/12.1.0/cassert:
 
 C:/msys64/mingw64/include/assert.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Rect.inl:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/quoted_string.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/erase_if.h:
@@ -780,6 +892,8 @@ C:/msys64/mingw64/include/c++/12.1.0/cmath:
 
 C:/msys64/mingw64/include/c++/12.1.0/limits:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Window.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/tr1/gamma.tcc:
 
 C:/msys64/mingw64/include/c++/12.1.0/tr1/special_function_util.h:
@@ -791,6 +905,8 @@ C:/msys64/mingw64/include/c++/12.1.0/tr1/beta_function.tcc:
 C:/msys64/mingw64/include/c++/12.1.0/tr1/exp_integral.tcc:
 
 C:/msys64/mingw64/include/c++/12.1.0/tr1/hypergeometric.tcc:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocalPtr.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/tr1/legendre_function.tcc:
 
@@ -806,9 +922,13 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/stl_uninitialized.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/csetjmp:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Keyboard.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/regex_executor.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/cstdarg:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glsl.inl:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/regex_scanner.h:
 
@@ -858,6 +978,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/shared_ptr_base.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_heap.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Config.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/set:
@@ -874,11 +996,15 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/stl_deque.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/deque.tcc:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/VideoMode.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/codecvt.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/latch:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/basic_file.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glsl.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/c++io.h:
 
@@ -906,6 +1032,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/node_handle.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/unordered_map.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Sensor.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/vector:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_vector.h:
@@ -926,9 +1054,13 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/locale_facets_nonio.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/messages_members.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Vertex.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/locale_conv.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/iterator:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector2.inl:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stream_iterator.h:
 
@@ -972,9 +1104,13 @@ C:/msys64/mingw64/include/c++/12.1.0/pstl/glue_numeric_defs.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/queue:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderStates.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_queue.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/stl_set.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/GlResource.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/stack:
 
@@ -993,6 +1129,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/mask_array.h:
 C:/msys64/mingw64/include/c++/12.1.0/bits/indirect_array.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/atomic:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Export.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/chrono:
 
@@ -1022,6 +1160,8 @@ C:/msys64/mingw64/include/c++/12.1.0/bits/this_thread_sleep.h:
 
 C:/msys64/mingw64/include/semaphore.h:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Sprite.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/bits/forward_list.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/forward_list.tcc:
@@ -1032,6 +1172,8 @@ C:/msys64/mingw64/include/c++/12.1.0/mutex:
 
 C:/msys64/mingw64/include/c++/12.1.0/random:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/ConvexShape.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/x86_64-w64-mingw32/bits/opt_random.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/random.tcc:
@@ -1041,6 +1183,8 @@ C:/msys64/mingw64/include/c++/12.1.0/regex:
 C:/msys64/mingw64/include/c++/12.1.0/bits/regex_constants.h:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/regex_automaton.h:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/PrimitiveType.hpp:
 
 C:/msys64/mingw64/include/c++/12.1.0/bits/regex_automaton.tcc:
 
@@ -1074,8 +1218,86 @@ C:/msys64/mingw64/include/c++/12.1.0/ranges:
 
 C:/msys64/mingw64/include/c++/12.1.0/span:
 
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Cursor.hpp:
+
 C:/msys64/mingw64/include/c++/12.1.0/source_location:
 
 C:/msys64/mingw64/include/c++/12.1.0/spanstream:
 
 C:/msys64/mingw64/include/c++/12.1.0/stacktrace:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Clock.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Time.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Err.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/FileInputStream.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/InputStream.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Lock.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/MemoryInputStream.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Mutex.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/String.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Utf.inl:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/String.inl:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Thread.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Thread.inl:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocal.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/BlendMode.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/ThreadLocalPtr.inl:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector2.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/System/Vector3.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Clipboard.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Context.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/ContextSettings.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/Touch.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Window/WindowHandle.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Export.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Drawable.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Transform.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Rect.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Transformable.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/VertexArray.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Color.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Font.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/Glyph.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RectangleShape.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/View.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/RenderWindow.hpp:
+
+C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML\ 2.5.1/include/SFML/Graphics/VertexBuffer.hpp:
