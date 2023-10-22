@@ -1,13 +1,18 @@
 #include <iostream>
 #include<bits/stdc++.h>
 #include<SFML/Graphics.hpp>
+#include <sys/time.h>
+
+#define GAME_WINDOW_SIZE_X 1500
+#define GAME_WINDOW_SIZE_Y 800
+#define INTERFACE_WINDOW_SIZE_Y 100
 
 int size_x, size_y;
 int apples;
 int n;
 int relative_x;
 int relative_y;
-
+long long start_time;
 
 class Entity {
 protected:
@@ -37,7 +42,7 @@ public:
     void draw(sf::RenderWindow& window) override {
         sf::RectangleShape rectangle(sf::Vector2f(relative_x, relative_y));
         rectangle.setFillColor(sf::Color::Red);
-        rectangle.move(relative_x*this->GetPosition().first, relative_y*this->GetPosition().second);
+        rectangle.move(relative_x*this->GetPosition().first, relative_y*this->GetPosition().second +INTERFACE_WINDOW_SIZE_Y);
         window.draw(rectangle);
     }
 };
@@ -45,20 +50,26 @@ int Apple::counter = 0;
 
 
 class Crawler: public Entity{
-
+private:
+    int steps=0;
 public:
+
     explicit Crawler(std::pair<int, int> position) : Entity(position) {
 
     }
     void move(sf::RenderWindow& window, int x=0, int y =0) {
         this->position.first += x;
         this->position.second += y;
+        steps++;
     }
     void draw(sf::RenderWindow& window) override{
         sf::RectangleShape rectangle(sf::Vector2f(relative_x, relative_y));
         rectangle.setFillColor(sf::Color::Green);
-        rectangle.move(relative_x*this->GetPosition().first, relative_y*this->GetPosition().second);
+        rectangle.move(relative_x*this->GetPosition().first, relative_y*this->GetPosition().second + INTERFACE_WINDOW_SIZE_Y);
         window.draw(rectangle);
+    }
+    int getSteps(){
+        return steps;
     }
 };
 class Map {
@@ -93,19 +104,19 @@ public:
             while(crawler->GetPosition().first != x->GetPosition().first){
                 if(crawler->GetPosition().first < x->GetPosition().first) {
                     crawler->move(window, 1, 0);
-                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                    std::this_thread::sleep_for(std::chrono::milliseconds(5000/n));
                 }else{
                     crawler->move(window, -1, 0);
-                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                    std::this_thread::sleep_for(std::chrono::milliseconds(5000/n));
                 }
             }
             while(crawler->GetPosition().second != x->GetPosition().second){
                 if(crawler->GetPosition().second < x->GetPosition().second) {
                     crawler->move(window, 0, 1);
-                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                    std::this_thread::sleep_for(std::chrono::milliseconds(5000/n));
                 }else{
                     crawler->move(window, 0, -1);
-                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                    std::this_thread::sleep_for(std::chrono::milliseconds(5000/n));
 
                 }
             }
@@ -117,6 +128,9 @@ public:
     }
     std::set<std::shared_ptr<Entity>> getEntities(){
         return Entities;
+    }
+    int getCrawlerSteps(){
+        return this->crawler->getSteps();
     }
 };
 Map* Map::pMapInstance = nullptr;
@@ -141,30 +155,38 @@ public:
         }
         for(auto &x : Map::getInstance()->getEntities()){
             for(auto &y: Map::getInstance()->getEntities()){
-                if(x->GetPosition().first == y->GetPosition().first && y->GetPosition().second == y->GetPosition().second) continue;
+                if(x->GetPosition().first == y->GetPosition().first && x->GetPosition().second == y->GetPosition().second) continue;
                 dist[std::make_pair(x,y)] = std::abs(x->GetPosition().first - y->GetPosition().first) + std::abs(x->GetPosition().second - y->GetPosition().second);
             }
         }
         std::set<std::shared_ptr<Entity>> UsedEntities;
-        this->path = dfs(firstEntity, UsedEntities,path, min);
-        std::reverse(path.begin(), path.end());
-        std::cout << "N: " << n << "\n";
+        auto start = std::chrono::high_resolution_clock::now();
+
+        dfs(firstEntity, UsedEntities,path, min);
+        auto end = std::chrono::high_resolution_clock::now();
+        auto duration = duration_cast<std::chrono::milliseconds>(end - start);
+
+        //std::reverse(path.begin()+1, path.end());
+        std::cout << "Algorightm time: " << duration.count() << " ms\n";
+
 
     }
     std::vector<std::shared_ptr<Entity>> dfs(std::shared_ptr<Entity> cEntity, std::set<std::shared_ptr<Entity>>& UsedEntities, std::vector<std::shared_ptr<Entity>> path1, int counter) {
         UsedEntities.insert(cEntity);
-
+        std::set<std::shared_ptr<Entity>> TempUsed(UsedEntities);
+        if(path1.size()>=Map::getInstance()->getEntities().size()){
+            return path1;
+        }
+        path1.emplace_back(cEntity); // Додаємо поточну вершину в шлях
         for (auto& x : Map::getInstance()->getEntities()) {
-            if (!UsedEntities.contains(x) && (counter + dist[std::make_pair(cEntity, x)]) <= n) {
-                std::cout << "Dist: " << dist[std::make_pair(cEntity, x)] << "\n";
-                counter = counter + dist[std::make_pair(cEntity, x)]; // Зберігаємо нове значення локально
-                std::vector<std::shared_ptr<Entity>> subPath = dfs(x, UsedEntities, path1, counter);
-                if (subPath.size() > path1.size()) {
-                    path1 = subPath; // Якщо підшлях довший, оновлюємо шлях
+            if (!TempUsed.contains(x) && (counter + dist[std::make_pair(cEntity, x)]) <= n) {
+                TempUsed.insert(x);
+                std::vector<std::shared_ptr<Entity>> subPath = dfs(x, UsedEntities, path1, counter + dist[std::make_pair(cEntity, x)]);
+                if (subPath.size()> path.size()) {
+                    path = subPath;
                 }
             }
         }
-        path1.emplace_back(cEntity); // Додаємо поточну вершину в шлях
         return path1;
     }
     std::vector<std::shared_ptr<Entity>> getPath(){
@@ -200,19 +222,39 @@ void input(){
 
 void renderingThread(sf::RenderWindow* window)
 {
-    // activate the window's context
-    window->setActive(true);
-    relative_y = window->getSize().y/size_y;
-    relative_x = window->getSize().x/size_x;
+    sf::Font font;
+    sf::Text n_text;
+    sf::Text apples_text;
 
-    // the rendering loop
+    if(!font.loadFromFile("../fonts/OpenSans-Regular.ttf")) {
+        assert("Error loading font");
+    }
+    n_text.setFont(font);
+    apples_text.setFont(font);
+    window->setActive(true);
+    relative_y = (window->getSize().y-INTERFACE_WINDOW_SIZE_Y)/size_y;
+    relative_x = (window->getSize().x)/size_x;
+
+    apples_text.move(300,0);
+
     while (window->isOpen())
     {
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-
         window->clear(sf::Color::White);
+        wchar_t temp[100];
+        swprintf(temp, 100, L"Кількість ходів: %d", Map::getInstance()->getCrawlerSteps());
+        n_text.setString(temp);
+        n_text.setCharacterSize(25);
+        n_text.setFillColor(sf::Color::Red);
+        window->draw(n_text);
+        wchar_t temp2[100];
+        swprintf(temp2, 100, L"З'їв яблук: %d", apples-Map::getInstance()->getEntities().size());
+        apples_text.setString(temp2);
+        apples_text.setCharacterSize(25);
+        apples_text.setFillColor(sf::Color::Red);
+        window->draw(apples_text);
         Map::getInstance()->draw(*window);
-        for (float y = 0; y < window->getSize().y; y += relative_y)
+
+        for (float y = INTERFACE_WINDOW_SIZE_Y; y < window->getSize().y; y += relative_y)
         {
             sf::Vertex line[] =
                     {
@@ -222,12 +264,11 @@ void renderingThread(sf::RenderWindow* window)
             window->draw(line, 2, sf::Lines);
         }
 
-        // Відображення вертикальних ліній сітки
         for (float x = 0; x < window->getSize().x; x += relative_x)
         {
             sf::Vertex line[] =
                     {
-                            sf::Vertex(sf::Vector2f(x, 0),sf::Color::Black),
+                            sf::Vertex(sf::Vector2f(x, INTERFACE_WINDOW_SIZE_Y),sf::Color::Black),
                             sf::Vertex(sf::Vector2f(x, window->getSize().y),sf::Color::Black)
                     };
             window->draw(line, 2, sf::Lines);
@@ -236,7 +277,6 @@ void renderingThread(sf::RenderWindow* window)
 
 
 
-        // end the current frame
         window->display();
     }
 }
@@ -244,8 +284,8 @@ void renderingThread(sf::RenderWindow* window)
 
 int main() {
     input();
-    sf::RenderWindow window(sf::VideoMode(1500, 800), "My window");
-    window.setFramerateLimit(10);
+    sf::RenderWindow window(sf::VideoMode(GAME_WINDOW_SIZE_X, GAME_WINDOW_SIZE_Y+INTERFACE_WINDOW_SIZE_Y), "CW_ASD");
+    window.setFramerateLimit(20);
     auto pMap = Map::getInstance(std::make_pair(size_x,size_y));
     Solution a(std::make_pair(0,0));
     window.setActive(false);

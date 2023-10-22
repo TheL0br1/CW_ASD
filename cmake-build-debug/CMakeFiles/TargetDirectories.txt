@@ -1,3 +1,3 @@
-C:/Users/User/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/CW_ASD.dir
-C:/Users/User/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Andriy pidor/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/CW_ASD.dir
+C:/Users/Andriy pidor/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Andriy pidor/CLionProjects/CW_ASD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
