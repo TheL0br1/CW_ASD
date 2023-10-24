@@ -141,6 +141,7 @@ Map* Map::pMapInstance = nullptr;
 class Solution{
 private:
     std::map<std::pair<std::shared_ptr<Entity>,std::shared_ptr<Entity>>, int> dist;
+    std::vector<std::vector<int>> graph;
     std::vector<std::shared_ptr<Entity>> path;
 public:
 
@@ -159,6 +160,7 @@ public:
                 dist[std::make_pair(x,y)] = std::abs(x->GetPosition().first - y->GetPosition().first) + std::abs(x->GetPosition().second - y->GetPosition().second);
             }
         }
+
         std::set<std::shared_ptr<Entity>> UsedEntities;
         auto start = std::chrono::high_resolution_clock::now();
 
@@ -189,6 +191,65 @@ public:
         }
         return path1;
     }
+    std::vector<int> findLongestPath(std::vector<std::vector<int>>& graph, int start, int n) {
+        int numVertices = graph.size();
+        std::vector<std::vector<std::pair<int, int>> > paths(numVertices); // Масив, який зберігає максимальну відстань та попередню вершину.
+        std::vector<bool> visited(numVertices, false);
+
+        paths[start].push_back({0, -1}); // Початкова вершина з відстанню 0 та без попередньої вершини.
+
+        for (int i = 0; i < numVertices; ++i) {
+            for (int v = 0; v < numVertices; ++v) {
+                if (!visited[v] && !paths[v].empty()) {
+                    std::pair<int, int> current = paths[v].back();
+                    int currentDistance = current.first;
+                    int previousVertex = current.second;
+
+                    for (int u = 0; u < numVertices; ++u) {
+                        if (!visited[u] && graph[v][u] > 0) { // Якщо існує ребро
+                            int newDistance = currentDistance + graph[v][u];
+
+                            if (newDistance <= n) {
+                                paths[u].push_back({newDistance, v});
+                            }
+                        }
+                    }
+
+                    visited[v] = true; // Позначаємо вершину, яку вже врахували.
+                }
+            }
+        }
+
+        int longestPathLength = 0;
+        int endVertex = -1;
+
+        // Знаходимо найдовший шлях
+        for (int v = 0; v < numVertices; ++v) {
+            if (!paths[v].empty()) {
+                int currentDistance = paths[v].back().first;
+                if (currentDistance > longestPathLength) {
+                    longestPathLength = currentDistance;
+                    endVertex = v;
+                }
+            }
+        }
+
+        // Побудова найдовшого шляху
+        std::stack<int> pathStack;
+        while (endVertex != -1) {
+            pathStack.push(endVertex);
+            endVertex = paths[endVertex].back().second;
+        }
+
+        std::vector<int> longestPath;
+        while (!pathStack.empty()) {
+            longestPath.push_back(pathStack.top());
+            pathStack.pop();
+        }
+
+        return longestPath;
+    }
+
     std::vector<std::shared_ptr<Entity>> getPath(){
         return path;
     }
