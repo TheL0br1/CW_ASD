@@ -256,8 +256,14 @@ CW_ASD_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CW_ASD_SOURCE_DIR:STATIC=C:/Users/User/CLionProjects/CW_ASD
 
+//Path to a library.
+FreeType_LIB:FILEPATH=C:/Users/User/Desktop/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML 2.5.1/lib/libfreetype.a
+
 //The directory containing a CMake configuration file for SFML.
 SFML_DIR:PATH=SFML_DIR-NOTFOUND
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
 
 
 ########################
@@ -424,6 +430,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FreeType_LIB
+FreeType_LIB-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 
