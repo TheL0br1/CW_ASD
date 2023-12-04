@@ -14,7 +14,10 @@ int apples;
 int n;
 int relative_x;
 int relative_y;
+sf::RenderWindow *pWindow;
+double n_relative;
 double time1 = GAME_TIME;
+bool blocked = false;
 sf::Clock* clock1;
 
 class Entity {
@@ -81,6 +84,7 @@ private:
     std::shared_ptr<Crawler> crawler;
     int collisionCount =0;
     explicit Map(std::pair<int, int> ){
+        collisionCount =0;
         srand (time(nullptr));
         crawler = std::make_shared<Crawler>(std::make_pair(0,0));
         std::ifstream input("1.txt");
@@ -96,7 +100,10 @@ private:
                     std::cerr << "Error reading line: " << line << std::endl;
                 }
             }
-            apples = getEntities().size();
+            apples = Entities.size();
+            n_relative =((double)n/((double)size_x/4.0));
+
+
             input.close();
         }
         else {
@@ -119,10 +126,13 @@ public:
     int getCollisionCount(){
         return collisionCount;
     }
-    void resetGame(){
+    void
+    resetGame(){
+        collisionCount =0;
         srand (time(nullptr));
         crawler = std::make_shared<Crawler>(std::make_pair(0,0));
         time1 = GAME_TIME;
+        Entities.clear();
         std::ifstream input("1.txt");
         if(input.is_open()){
             std::string line;
@@ -137,6 +147,7 @@ public:
                 }
             }
             apples = getEntities().size();
+            n_relative =((double)n/((double)size_x/4.0));
             input.close();
         }
         else {
@@ -156,27 +167,29 @@ public:
         crawler->draw(window);
     }
 
-    void drawPath(sf::RenderWindow& window, const std::vector<std::shared_ptr<Entity>>& path){
+    void drawPath(const std::vector<std::shared_ptr<Entity>>& path){
+
         for (auto &x : path) {
             while(crawler->GetPosition().first != x->GetPosition().first){
                 if(crawler->GetPosition().first < x->GetPosition().first) {
-                    crawler->move(window, 1, 0);
+                    crawler->move(*pWindow, 1, 0);
                 }else{
-                    crawler->move(window, -1, 0);
+                    crawler->move(*pWindow, -1, 0);
                 }
-               // std::this_thread::sleep_for(std::chrono::milliseconds(50));
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
 
             }
             while(crawler->GetPosition().second != x->GetPosition().second){
                 if(crawler->GetPosition().second < x->GetPosition().second) {
-                    crawler->move(window, 0, 1);
+                    crawler->move(*pWindow, 0, 1);
 
                 }else{
-                    crawler->move(window, 0, -1);
+                    crawler->move(*pWindow, 0, -1);
 
                 }
-               // std::this_thread::sleep_for(std::chrono::milliseconds(50));
-                time1 -= clock1->restart().asMilliseconds();
+                std::this_thread::sleep_for(std::chrono::milliseconds(50));
+
+                //time1 -= clock1->restart().asMilliseconds();
             }
             this->Entities.erase(x);
         }
@@ -199,11 +212,19 @@ public:
 Map* Map::pMapInstance = nullptr;
 
 
+void drawWrap( const std::vector<std::shared_ptr<Entity>>& path){
+    Map::getInstance()->drawPath(path);
+}
 
 
 class Solution{
 private:
     std::vector<std::shared_ptr<Entity>> pathSol1;
+    std::vector<std::shared_ptr<Entity>> path;
+    std::map<std::pair<std::shared_ptr<Entity>,std::shared_ptr<Entity>>, int> dist;
+    std::set<std::shared_ptr<Entity>> UsedEntities1;
+
+
 public:
 
     explicit Solution(){
@@ -247,15 +268,87 @@ public:
             res+=min;
             pathSol1.emplace_back(currentEntity);
             UsedEntities.insert(currentEntity);
-
-
         }
 
         return pathSol1;
     }
 
+    std::vector<std::shared_ptr<Entity>> dfs(std::shared_ptr<Entity> cEntity, std::set<std::shared_ptr<Entity>> UsedEntities, std::vector<std::shared_ptr<Entity>> path1, int counter) {
+        UsedEntities.insert(cEntity);
+        std::set<std::shared_ptr<Entity>> TempUsed(UsedEntities);
+        if(path1.size()>=Map::getInstance()->getEntities().size()){
+            return path1;
+        }
+        path1.emplace_back(cEntity); // Додаємо поточну вершину в шлях
+        for (auto& x : Map::getInstance()->getEntities()) {
+            if (!TempUsed.contains(x) && (counter + dist[std::make_pair(cEntity, x)]) <= (n/n_relative)) {
+                TempUsed.insert(x);
+                std::vector<std::shared_ptr<Entity>> subPath = dfs(x, UsedEntities, path1, counter + dist[std::make_pair(cEntity, x)]);
+                if (subPath.size()> path.size()) {
+                    path = subPath;
+                }
+            }
+        }
+        return path1;
+    }
+    std::vector<std::shared_ptr<Entity>> dfsWrap(){
+
+        std::shared_ptr<Entity> firstEntity;
+        int min = (1<<30) - 1;
+        std::pair<int,int> cPos;
+        if(path.empty()){
+            cPos = std::make_pair(0,0);
+        }else {
+            cPos = std::make_pair(path[path.size() - 1]->GetPosition().first,
+                                                      path[path.size() - 1]->GetPosition().first);
+            path.clear();
+        }
+        for(auto &x : Map::getInstance()->getEntities()){
+            if(!UsedEntities1.contains(x) && std::abs(cPos.first - x->GetPosition().first) + std::abs(cPos.second - x->GetPosition().second) < min){
+                firstEntity = x;
+                min = std::abs(cPos.first - x->GetPosition().first) + std::abs(cPos.second - x->GetPosition().second);
+            }
+        }
+        for(auto &x : Map::getInstance()->getEntities()){
+            for(auto &y: Map::getInstance()->getEntities()){
+                if(!UsedEntities1.contains(x) && x->GetPosition().first == y->GetPosition().first && x->GetPosition().second == y->GetPosition().second) continue;
+                dist[std::make_pair(x,y)] = std::abs(x->GetPosition().first - y->GetPosition().first) + std::abs(x->GetPosition().second - y->GetPosition().second);
+            }
+        }
+        for (int i = 0; i < n_relative; ++i) {
+            auto start = std::chrono::high_resolution_clock::now();
+            if(i==0) {
+                dfs(firstEntity, UsedEntities1, path, min);
+            }
+            else{
+                dfs(firstEntity, UsedEntities1, path, 0);
+            }
+            for(auto& x : path){
+                UsedEntities1.insert(x);
+            }
+            auto end = std::chrono::high_resolution_clock::now();
+            auto duration = duration_cast<std::chrono::milliseconds>(end - start);
+            std::cout << "Algorightm time: " << duration.count() << " ms\n";
+            sf::Thread thread1(drawWrap, path);
+            thread1.launch();
+            thread1.wait();
+            //Map::getInstance()->drawPath(path);
+            firstEntity = path[path.size()-1];
+            path.clear();
+        }
+        return path;
+
+    }
+
     std::vector<std::shared_ptr<Entity>> getPath(){
         return pathSol1;
+    }
+
+    void restartGame(){
+        pathSol1.clear();
+        path.clear();
+        dist.clear();
+        UsedEntities1.clear();
     }
 };
 
@@ -268,7 +361,9 @@ void input(){
     std::cout << "Введіть кількість яблук\n";
     std::cin >> apples;
     std::cout <<"Введіть кількість ходів\n";
+
     std::cin >> n;
+    n_relative =((double)n/((double)size_x/2.0));
 
 }
 
@@ -295,6 +390,9 @@ void renderingThread(sf::RenderWindow* window)
     time_text.move(500,0);
     while (window->isOpen())
     {
+        if(blocked){
+            continue;
+        }
         window->clear(sf::Color::White);
         wchar_t temp[100];
         swprintf(temp, 100, L"Кількість ходів: %d", Map::getInstance()->getCrawlerSteps());
@@ -324,6 +422,7 @@ void renderingThread(sf::RenderWindow* window)
 int main() {
     input();
     sf::RenderWindow window(sf::VideoMode(GAME_WINDOW_SIZE_X, GAME_WINDOW_SIZE_Y+INTERFACE_WINDOW_SIZE_Y), "CW_ASD");
+    pWindow = &window;
     window.setFramerateLimit(10);
     auto pMap = Map::getInstance(std::make_pair(size_x,size_y));
     window.setActive(false);
@@ -341,19 +440,28 @@ int main() {
 
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            clock1->restart().asMilliseconds();
+            auto path = a.dfsWrap();
+            time1 -= clock1->restart().asMilliseconds();
+            std::cout << time1/1000.0f << '\n';
 
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z)){
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
             clock1->restart().asMilliseconds();
             auto path = a.simple();
-            pMap->drawPath(window, path);
+            pMap->drawPath(path);
             time1 -= clock1->restart().asMilliseconds();
             std::cout << time1/1000.0f << '\n';
 
+
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
+            blocked = true;
             pMap->resetGame();
+            a.restartGame();
+            blocked = false;
         }
 
     }
